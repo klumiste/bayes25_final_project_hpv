@@ -1,0 +1,19 @@
+dag {
+"academic ability" [latent,pos="-0.810,-0.993"]
+avg_grade [exposure,pos="-0.726,-0.995"]
+county [pos="-0.727,-1.084"]
+domestic_background [pos="-0.810,-1.084"]
+exam_score [outcome,pos="-0.809,-0.926"]
+gender [pos="-0.879,-1.084"]
+year [pos="-0.878,-0.926"]
+"academic ability" -> avg_grade
+"academic ability" -> exam_score
+avg_grade -> exam_score
+county -> "academic ability"
+county -> avg_grade
+county -> domestic_background
+domestic_background -> "academic ability"
+gender -> "academic ability"
+gender -> avg_grade
+year -> exam_score
+}
